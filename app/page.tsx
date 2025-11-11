@@ -1,11 +1,29 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import bg from '@/public/bg.png'
 
 export default function Page() {
 	return (
-		<div>
-			<h1>Eden Cabins. Welcome to paradise.</h1>
+		<main className="mt-24">
+			<Image
+				src={bg}
+				fill
+				placeholder="blur"
+				alt="Mountains and forests with two cabins"
+				className="object-cover object-top"
+			/>
 
-			<Link href="/cabins">Explore luxury cabins</Link>
-		</div>
+			<div className="relative z-10 text-center">
+				<h1 className="text-8xl text-primary-50 mb-12 tracking-tight font-medium">
+					Welcome to paradise.
+				</h1>
+				<Link
+					href="/cabins"
+					className="bg-accent-500 px-8 py-6 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
+				>
+					Explore luxury cabins
+				</Link>
+			</div>
+		</main>
 	)
 }

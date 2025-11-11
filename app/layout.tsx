@@ -1,9 +1,9 @@
-import { Inter } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 
 import Header from '@/components/Header'
 import '@/styles/globals.css'
 
-const inter = Inter({
+const nunitoSans = Nunito_Sans({
 	subsets: ['latin'],
 	display: 'swap',
 })
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en">
 			<body
-				className={`${inter.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col antialiased`}
+				className={`${nunitoSans.className} bg-primary-950 text-primary-100 min-h-screen flex flex-col antialiased relative`}
 			>
 				<Header />
 				<div className="flex-1 px-8 py-12">
