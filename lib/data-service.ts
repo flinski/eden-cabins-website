@@ -7,6 +7,7 @@ export type Cabin = {
 	maxCapacity: number
 	regularPrice: number
 	discount: number
+	description: string
 	image: string
 }
 
@@ -17,7 +18,9 @@ export async function getCabin(id: string) {
 		console.error(error)
 	}
 
-	return data
+	const cabin: Cabin = data
+
+	return cabin
 }
 
 export async function getCabinPrice(id: string) {
